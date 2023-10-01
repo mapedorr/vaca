@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://popochiu/characters/chiquininin/character_chiquininin.gd" id="1_76x7f"]
 [ext_resource type="Texture2D" uid="uid://due3fyaicvm5d" path="res://popochiu/characters/chiquininin/chiquininin_happy.png" id="2_lf5fk"]
 [ext_resource type="Texture2D" uid="uid://c4effkatrp4ne" path="res://popochiu/characters/chiquininin/chiquininin.png" id="2_w7dqy"]
-[ext_resource type="Texture2D" uid="uid://013dkiuq7ng1" path="res://popochiu/characters/chiquininin/chiquininin_sad.png" id="3_ako1t"]
+[ext_resource type="Texture2D" uid="uid://013dkiuq7ng1" path="res://popochiu/autoloads/chiquininin_sad.png" id="3_ako1t"]
 
 [sub_resource type="Animation" id="Animation_ygok6"]
 length = 0.5

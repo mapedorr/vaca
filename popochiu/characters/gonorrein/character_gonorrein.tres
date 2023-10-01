@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bvqq7bumj037j"]
+
+[ext_resource type="Script" path="res://popochiu/characters/gonorrein/character_gonorrein_state.gd" id="1_b03a1"]
+
+[resource]
+resource_name = "Gonorrein"
+script = ExtResource("1_b03a1")
+script_name = "Gonorrein"
+scene = "res://popochiu/characters/gonorrein/character_gonorrein.tscn"

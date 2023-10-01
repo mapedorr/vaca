@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvakal27dt3n2"]
+
+[ext_resource type="Script" path="res://popochiu/characters/carenalga/character_carenalga.gd" id="1_4i2ms"]
+[ext_resource type="Texture2D" uid="uid://bo0xxwmu8887h" path="res://popochiu/characters/carenalga/carenalga_normal.png" id="2_f7vex"]
+[ext_resource type="Texture2D" uid="uid://cng4wnhdykj2v" path="res://popochiu/characters/carenalga/carenalga_sad.png" id="3_dhg0r"]
+
+[node name="CharacterCarenalga" type="Area2D"]
+script = ExtResource("1_4i2ms")
+avatars = [{
+"avatar": ExtResource("2_f7vex"),
+"emotion": ""
+}, {
+"avatar": ExtResource("3_dhg0r"),
+"emotion": "sad"
+}]
+popochiu_placeholder = null
+script_name = "Carenalga"
+description = "Carenalga"
+cursor = 8
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
+
+[node name="BaselineHelper" type="Line2D" parent="."]
+visible = false
+points = PackedVector2Array(-10000, 0, 10000, 0)
+width = 1.0
+
+[node name="WalkToHelper" type="Marker2D" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="WalkToHelper"]
+offset_left = -2.5
+offset_top = -2.5
+offset_right = 2.5
+offset_bottom = 2.5
+color = Color(0, 1, 1, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+
+[node name="DialogPos" type="Marker2D" parent="."]
+visible = false

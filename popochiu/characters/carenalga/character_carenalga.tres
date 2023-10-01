@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bk5jgvtim0rl2"]
+
+[ext_resource type="Script" path="res://popochiu/characters/carenalga/character_carenalga_state.gd" id="1_yecxk"]
+
+[resource]
+resource_name = "Carenalga"
+script = ExtResource("1_yecxk")
+script_name = "Carenalga"
+scene = "res://popochiu/characters/carenalga/character_carenalga.tscn"

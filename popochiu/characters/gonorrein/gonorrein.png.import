@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://013dkiuq7ng1"
-path="res://.godot/imported/chiquininin_sad.png-192223650af5b19ab70f793b249b55a9.ctex"
+uid="uid://c15cnw0dv78xl"
+path="res://.godot/imported/gonorrein.png-33016ec2e5f0bb405d0b28a85cf2acbd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://popochiu/characters/chiquininin/chiquininin_sad.png"
-dest_files=["res://.godot/imported/chiquininin_sad.png-192223650af5b19ab70f793b249b55a9.ctex"]
+source_file="res://popochiu/characters/gonorrein/gonorrein.png"
+dest_files=["res://.godot/imported/gonorrein.png-33016ec2e5f0bb405d0b28a85cf2acbd.ctex"]
 
 [params]
 

@@ -31,10 +31,20 @@ func _on_room_transition_finished() -> void:
 		"Goddiu(sad): La mala es que NO TIENE NI UN peso para salir del platanal.",
 		C.Popsy.queue_play_animation("sad"),
 		"Popsy(sad): Pobreciu.",
-#		"Gonorrein(angry): [shake]¡Qué bobiu es Papiu Mateiu![/shake]",
+		"Gonorrein(angry): [shake]¡Qué bobiu es Papiu Mateiu![/shake]",
 		"Chiquininin(sad): Ayyyy [wave]doooooooooooooo[/wave]",
-#		"",
-#		"",
+		"Carenalga: Sííííí mis popochius.",
+		"Carenalga(sad): Estoy en la B y no tengo cómo pagarme el viaje a Munich, Alemania.",
+		"Carenalga(sad): Lo siento muchíu...",
+		"...",
+		"Goddiu: ¡No te preocupes Papiu Mateiu!",
+		"Goddiu(happy): Nosotros te ayudandíu a conseguir el dineriu",
+		"Popochius: Tiiiiiiiiiiiii",
+		"Popsy: Tú que estás leyendo esto",
+		"Popsy: Ayúdanos con esta [shake]Vaki[/shake] para que puedan hablar de nosotros en Aleminia",
+		"Chiquininin(happy): Tiiiiiii",
+		"Gonorrein(angry): Es Alemania, ¡bobiu!",
+		"Chiquininin(happy): ¡Ayúdanos pofaví!",
 	])
 
 
