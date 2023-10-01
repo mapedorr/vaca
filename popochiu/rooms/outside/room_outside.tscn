@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dwj11by5mx8w2"]
+[gd_scene load_steps=15 format=3 uid="uid://dwj11by5mx8w2"]
 
 [ext_resource type="Script" path="res://popochiu/rooms/outside/room_outside.gd" id="1_46sux"]
 [ext_resource type="PackedScene" uid="uid://duhi6q8s3gh7f" path="res://popochiu/rooms/outside/props/bg/prop_bg.tscn" id="2_b1lfa"]
@@ -12,12 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://vpoveyik0tif" path="res://popochiu/characters/gonorrein/character_gonorrein.tscn" id="12_dtero"]
 [ext_resource type="PackedScene" uid="uid://ceiwbdcyh4hhx" path="res://popochiu/characters/chiquininin/character_chiquininin.tscn" id="12_gs0ca"]
 [ext_resource type="PackedScene" uid="uid://cpgsu8py8423f" path="res://popochiu/characters/popsy/character_popsy.tscn" id="12_iixd8"]
-[ext_resource type="Script" path="res://popochiu/characters/gonorrein/character_gonorrein.gd" id="13_enjnq"]
-[ext_resource type="Texture2D" uid="uid://svg1rcr7tw5a" path="res://popochiu/characters/gonorrein/gonorrein_angry.png" id="14_43f0p"]
 [ext_resource type="PackedScene" uid="uid://cvakal27dt3n2" path="res://popochiu/characters/carenalga/character_carenalga.tscn" id="15_5sxi1"]
-[ext_resource type="Script" path="res://popochiu/characters/carenalga/character_carenalga.gd" id="16_uxcur"]
-[ext_resource type="Texture2D" uid="uid://bo0xxwmu8887h" path="res://popochiu/characters/carenalga/carenalga_normal.png" id="17_pebck"]
-[ext_resource type="Texture2D" uid="uid://cng4wnhdykj2v" path="res://popochiu/characters/carenalga/carenalga_sad.png" id="18_fsb3k"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_abqen"]
 vertices = PackedVector2Array(116, 41, 217, 69, 182, 80, -215, 83, -215, 37, -123, 8, -37, 7, 119, 13)
@@ -77,48 +72,8 @@ position = Vector2(308, 146)
 [node name="CharacterChiquininin *" parent="Characters" instance=ExtResource("12_gs0ca")]
 position = Vector2(-4, 116)
 
-[node name="CharacterGonorrein *" type="Area2D" parent="Characters" instance=ExtResource("12_dtero")]
+[node name="CharacterGonorrein *" parent="Characters" instance=ExtResource("12_dtero")]
 position = Vector2(11, 156)
-script = ExtResource("13_enjnq")
-text_color = Color(0.554688, 0.234375, 0.589844, 1)
-avatars = [{
-"avatar": ExtResource("14_43f0p"),
-"emotion": "angry"
-}]
-popochiu_placeholder = null
-script_name = "Gonorrein"
-description = "Gonorrein"
-cursor = 8
-metadata/_popochiu_aseprite_config_ = {
-"o_folder": "",
-"o_name": "",
-"only_visible_layers": false,
-"op_exp": true,
-"player": "/root/@EditorNode@17637/@Control@697/@Panel@698/@VBoxContainer@706/@HSplitContainer@709/@HSplitContainer@717/@HSplitContainer@725/@VBoxContainer@726/@VSplitContainer@728/@VSplitContainer@754/@VBoxContainer@755/@PanelContainer@800/MainScreen/@CanvasItemEditor@10090/@VSplitContainer@9915/@HSplitContainer@9917/@HSplitContainer@9919/@Control@9920/@SubViewportContainer@9921/@SubViewport@9922/CharacterGonorrein/AnimationPlayer",
-"source": "res://popochiu/characters/gonorrein/gonorrein.aseprite",
-"tags": [{
-"import": true,
-"loops": true,
-"tag_name": "idle"
-}, {
-"import": true,
-"loops": true,
-"tag_name": "angry"
-}],
-"wipe_old_anims": true
-}
 
-[node name="CharacterCarenalga *" type="Area2D" parent="Characters" instance=ExtResource("15_5sxi1")]
+[node name="CharacterCarenalga *" parent="Characters" instance=ExtResource("15_5sxi1")]
 position = Vector2(160, 90)
-script = ExtResource("16_uxcur")
-avatars = [{
-"avatar": ExtResource("17_pebck"),
-"emotion": ""
-}, {
-"avatar": ExtResource("18_fsb3k"),
-"emotion": "sad"
-}]
-popochiu_placeholder = null
-script_name = "Carenalga"
-description = "Carenalga"
-cursor = 8

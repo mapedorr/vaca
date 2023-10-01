@@ -23,13 +23,13 @@ func _on_room_transition_finished() -> void:
 	await C.Goddiu.walk_to_marker("Talk")
 	await E.queue([
 		"Goddiu: Oñiiiiiii.",
-		"Popochius: [wave]Oñiiiiiiiiiiiiiiii[/wave].",
+		"Popochius: [shake]Oñiiiiiiiiiiiiiiii[/shake].",
 		"Goddiu(happy): Les tengo una [color=a9ff9f]buena[/color] y una [color=c46c71]mala[/color] noticia.",
 		"Popsy: ¿Qué pasí?",
 		"Goddiu: La [color=a9ff9f]buena noticia[/color] es que Papiu Mateiu hablará de nosotros en un lugarciu muy boniu.",
 		E.queue_camera_shake_bg(.5, 3),
-		"Popochius: [wave][rainbow]Tíííííííííííííííííííí[/rainbow][/wave]",
-		"Goddiu(sad): La mala es que NO TIENE NI UN peso para salir del platanal.",
+		"Popochius: [shake][rainbow]Tíííííííííííííííííííí[/rainbow][/shake]",
+		"Goddiu(sad): La mala es que [color=c46c71]NO TIENE EL DINERO SUFICIENTE[/color] para salir del platanal.",
 		"Popsy(sad): Pobreciu.",
 		"Gonorrein(angry): [shake]¡Qué bobiu es Papiu Mateiu![/shake]",
 		"Chiquininin(sad): Ayyyy [wave]doooooooooooooo[/wave]",
@@ -42,13 +42,15 @@ func _on_room_transition_finished() -> void:
 		"...",
 		"Goddiu: ¡No te preocupes Papiu Mateiu!",
 		"Goddiu(happy): Nosotros te ayudandíu a conseguir el dineriu",
-		"Popochius: Tiiiiiiiiiiiii",
+		"Popochius: [shake]Tiiiiiiiiiiiii[/shake]",
 		"Popsy: Tú que estás leyendo esto",
 		"Popsy: Ayúdanos con esta [shake]Vaki[/shake] para que puedan hablar de nosotros en Aleminia",
-		"Chiquininin(happy): Tiiiiiii",
+		"Chiquininin(happy): [shake]Tiiiiiii[/shake]",
 		"Gonorrein(angry): Es Alemania, ¡bobiu!",
-		"Chiquininin(happy): ¡Ayúdanos pofaví!",
+		"Chiquininin(happy): [wave]¡AYÚDANOS POFAVÍ![/wave]",
 	])
+	
+	E.goto_room("End")
 
 
 # What happens before Popochiu unloads the room.
