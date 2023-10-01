@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bvn4be8kunnyn"]
+
+[ext_resource type="Script" path="res://popochiu/characters/chiquininin/character_chiquininin_state.gd" id="1_527x3"]
+
+[resource]
+resource_name = "Chiquininin"
+script = ExtResource("1_527x3")
+script_name = "Chiquininin"
+scene = "res://popochiu/characters/chiquininin/character_chiquininin.tscn"

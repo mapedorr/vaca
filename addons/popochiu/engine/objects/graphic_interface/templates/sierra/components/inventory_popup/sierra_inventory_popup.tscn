@@ -1,0 +1,364 @@
+[gd_scene load_steps=29 format=3 uid="uid://dc7crw22yevoo"]
+
+[ext_resource type="Theme" uid="uid://csr0n32rthycw" path="res://addons/popochiu/engine/objects/graphic_interface/templates/sierra/resources/sierra_theme.tres" id="1_03e3k"]
+[ext_resource type="Script" path="res://addons/popochiu/engine/objects/graphic_interface/templates/sierra/components/inventory_popup/sierra_inventory_popup.gd" id="2_xj17e"]
+[ext_resource type="Texture2D" uid="uid://cmxrewai8t2lm" path="res://addons/popochiu/engine/objects/graphic_interface/resources/sprites/close.png" id="3_7aa5u"]
+[ext_resource type="Texture2D" uid="uid://p32i25numi5e" path="res://addons/popochiu/engine/objects/graphic_interface/resources/sprites/close_highlight.png" id="4_vd0bg"]
+[ext_resource type="Texture2D" uid="uid://cjairw6sepult" path="res://addons/popochiu/engine/objects/graphic_interface/templates/sierra/components/inventory_popup/sprites/btn_up.png" id="7_fb6og"]
+[ext_resource type="Script" path="res://addons/popochiu/engine/objects/graphic_interface/templates/9_verb/components/inventory_container/9_verb_inventory_container.gd" id="7_jcxai"]
+[ext_resource type="PackedScene" uid="uid://rinuypk1mpu" path="res://popochiu/inventory_items/toy_car/item_toy_car.tscn" id="7_ybtwc"]
+[ext_resource type="Texture2D" uid="uid://bctpmd8wh2ket" path="res://addons/popochiu/engine/objects/graphic_interface/templates/sierra/components/inventory_popup/sprites/btn_down.png" id="8_3bod0"]
+[ext_resource type="PackedScene" uid="uid://cs3angrbmha4b" path="res://popochiu/inventory_items/plate/item_plate.tscn" id="8_durqh"]
+[ext_resource type="Texture2D" uid="uid://57nl6xfjetoe" path="res://addons/popochiu/engine/objects/graphic_interface/templates/sierra/sprites/btn_look.png" id="8_m3ulb"]
+[ext_resource type="PackedScene" uid="uid://db6csk6i4f3un" path="res://addons/popochiu/engine/objects/graphic_interface/templates/9_verb/components/inventory_container/9_verb_slot.tscn" id="8_p6lvv"]
+[ext_resource type="Texture2D" uid="uid://pxmndq6c60g3" path="res://addons/popochiu/engine/objects/graphic_interface/templates/sierra/sprites/btn_select.png" id="10_vngai"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_roir4"]
+bg_color = Color(0, 0, 0, 0.498039)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xotul"]
+draw_center = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5q4ww"]
+atlas = ExtResource("7_fb6og")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kyoq5"]
+atlas = ExtResource("7_fb6og")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h01r2"]
+atlas = ExtResource("7_fb6og")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_byksk"]
+atlas = ExtResource("7_fb6og")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yciju"]
+atlas = ExtResource("8_3bod0")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_us8tl"]
+atlas = ExtResource("8_3bod0")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggndj"]
+atlas = ExtResource("8_3bod0")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0cbuc"]
+atlas = ExtResource("8_3bod0")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3r3in"]
+atlas = ExtResource("8_m3ulb")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2idn6"]
+atlas = ExtResource("8_m3ulb")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mndsc"]
+atlas = ExtResource("8_m3ulb")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t6f3x"]
+atlas = ExtResource("10_vngai")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2tl6r"]
+atlas = ExtResource("10_vngai")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6es1"]
+atlas = ExtResource("10_vngai")
+region = Rect2(0, 32, 32, 32)
+
+[node name="SierraInventoryPopup" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_03e3k")
+theme_override_styles/panel = SubResource("StyleBoxFlat_roir4")
+script = ExtResource("2_xj17e")
+
+[node name="PopupPanel" type="PanelContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PopupPanel"]
+layout_mode = 2
+
+[node name="HeaderContainer" type="HBoxContainer" parent="PopupPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="PopupPanel/VBoxContainer/HeaderContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Inventory"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Close" type="TextureButton" parent="PopupPanel/VBoxContainer/HeaderContainer"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = ExtResource("3_7aa5u")
+texture_pressed = ExtResource("4_vd0bg")
+texture_hover = ExtResource("4_vd0bg")
+
+[node name="InventoryContainer" type="HBoxContainer" parent="PopupPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 0
+script = ExtResource("7_jcxai")
+visible_rows = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PopupPanel/VBoxContainer/InventoryContainer"]
+custom_minimum_size = Vector2(120, 72)
+layout_mode = 2
+size_flags_horizontal = 3
+scroll_vertical_custom_step = 27.0
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="Box" type="GridContainer" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 5
+
+[node name="Slot" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box" instance=ExtResource("8_p6lvv")]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xotul")
+
+[node name="ItemToyCar" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box/Slot" instance=ExtResource("7_ybtwc")]
+layout_mode = 2
+
+[node name="Slot2" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box" instance=ExtResource("8_p6lvv")]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xotul")
+
+[node name="ItemPlate" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box/Slot2" instance=ExtResource("8_durqh")]
+layout_mode = 2
+
+[node name="Slot3" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box" instance=ExtResource("8_p6lvv")]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xotul")
+
+[node name="ItemToyCar" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box/Slot3" instance=ExtResource("7_ybtwc")]
+layout_mode = 2
+
+[node name="Slot4" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box" instance=ExtResource("8_p6lvv")]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xotul")
+
+[node name="ItemToyCar" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box/Slot4" instance=ExtResource("7_ybtwc")]
+layout_mode = 2
+
+[node name="Slot5" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box" instance=ExtResource("8_p6lvv")]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xotul")
+
+[node name="ItemToyCar" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box/Slot5" instance=ExtResource("7_ybtwc")]
+layout_mode = 2
+
+[node name="Slot6" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box" instance=ExtResource("8_p6lvv")]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xotul")
+
+[node name="ItemPlate" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box/Slot6" instance=ExtResource("8_durqh")]
+layout_mode = 2
+
+[node name="Slot7" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box" instance=ExtResource("8_p6lvv")]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xotul")
+
+[node name="ItemPlate" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box/Slot7" instance=ExtResource("8_durqh")]
+layout_mode = 2
+
+[node name="Slot8" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box" instance=ExtResource("8_p6lvv")]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xotul")
+
+[node name="ItemPlate" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box/Slot8" instance=ExtResource("8_durqh")]
+layout_mode = 2
+
+[node name="Slot9" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box" instance=ExtResource("8_p6lvv")]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xotul")
+
+[node name="ItemPlate" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box/Slot9" instance=ExtResource("8_durqh")]
+layout_mode = 2
+
+[node name="Slot10" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box" instance=ExtResource("8_p6lvv")]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xotul")
+
+[node name="ItemPlate" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box/Slot10" instance=ExtResource("8_durqh")]
+layout_mode = 2
+
+[node name="Slot11" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box" instance=ExtResource("8_p6lvv")]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xotul")
+
+[node name="ItemToyCar" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box/Slot11" instance=ExtResource("7_ybtwc")]
+layout_mode = 2
+
+[node name="Slot12" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box" instance=ExtResource("8_p6lvv")]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xotul")
+
+[node name="ItemToyCar" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box/Slot12" instance=ExtResource("7_ybtwc")]
+layout_mode = 2
+
+[node name="Slot13" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box" instance=ExtResource("8_p6lvv")]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xotul")
+
+[node name="ItemPlate" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box/Slot13" instance=ExtResource("8_durqh")]
+layout_mode = 2
+
+[node name="Slot14" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box" instance=ExtResource("8_p6lvv")]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xotul")
+
+[node name="ItemPlate" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box/Slot14" instance=ExtResource("8_durqh")]
+layout_mode = 2
+
+[node name="Slot15" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box" instance=ExtResource("8_p6lvv")]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xotul")
+
+[node name="Slot16" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box" instance=ExtResource("8_p6lvv")]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xotul")
+
+[node name="Slot17" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box" instance=ExtResource("8_p6lvv")]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xotul")
+
+[node name="Slot18" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box" instance=ExtResource("8_p6lvv")]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xotul")
+
+[node name="Slot19" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box" instance=ExtResource("8_p6lvv")]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xotul")
+
+[node name="Slot20" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box" instance=ExtResource("8_p6lvv")]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xotul")
+
+[node name="Slot21" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box" instance=ExtResource("8_p6lvv")]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xotul")
+
+[node name="Slot22" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box" instance=ExtResource("8_p6lvv")]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xotul")
+
+[node name="Slot23" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box" instance=ExtResource("8_p6lvv")]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xotul")
+
+[node name="Slot24" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box" instance=ExtResource("8_p6lvv")]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xotul")
+
+[node name="Slot25" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollContainer/Box" instance=ExtResource("8_p6lvv")]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xotul")
+
+[node name="ScrollButtons" type="VBoxContainer" parent="PopupPanel/VBoxContainer/InventoryContainer"]
+custom_minimum_size = Vector2(24, 0)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Up" type="TextureButton" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollButtons"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 2
+texture_normal = SubResource("AtlasTexture_5q4ww")
+texture_pressed = SubResource("AtlasTexture_kyoq5")
+texture_hover = SubResource("AtlasTexture_h01r2")
+texture_disabled = SubResource("AtlasTexture_byksk")
+stretch_mode = 3
+
+[node name="Down" type="TextureButton" parent="PopupPanel/VBoxContainer/InventoryContainer/ScrollButtons"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 10
+texture_normal = SubResource("AtlasTexture_yciju")
+texture_pressed = SubResource("AtlasTexture_us8tl")
+texture_hover = SubResource("AtlasTexture_ggndj")
+texture_disabled = SubResource("AtlasTexture_0cbuc")
+stretch_mode = 3
+
+[node name="FooterContainer" type="HBoxContainer" parent="PopupPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="Look" type="TextureButton" parent="PopupPanel/VBoxContainer/FooterContainer"]
+texture_filter = 1
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_3r3in")
+texture_pressed = SubResource("AtlasTexture_2idn6")
+texture_hover = SubResource("AtlasTexture_mndsc")
+
+[node name="Select" type="TextureButton" parent="PopupPanel/VBoxContainer/FooterContainer"]
+texture_filter = 1
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_t6f3x")
+texture_pressed = SubResource("AtlasTexture_2tl6r")
+texture_hover = SubResource("AtlasTexture_u6es1")
+
+[node name="Ok" type="Button" parent="PopupPanel/VBoxContainer/FooterContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "ok"
+
+[node name="Cancel" type="Button" parent="PopupPanel/VBoxContainer/FooterContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+text = "close"
+
+[connection signal="pressed" from="PopupPanel/VBoxContainer/FooterContainer/Look" to="." method="_on_look_pressed"]
+[connection signal="pressed" from="PopupPanel/VBoxContainer/FooterContainer/Select" to="." method="_on_select_pressed"]

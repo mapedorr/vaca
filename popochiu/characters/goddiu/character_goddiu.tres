@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bwf8mvunnb3rp"]
+
+[ext_resource type="Script" path="res://popochiu/characters/goddiu/character_goddiu_state.gd" id="1_jehk5"]
+
+[resource]
+resource_name = "Goddiu"
+script = ExtResource("1_jehk5")
+script_name = "Goddiu"
+scene = "res://popochiu/characters/goddiu/character_goddiu.tscn"
+script_name = "Goddiu"
+scene = "res://popochiu/characters/goddiu/character_goddiu.tscn"
