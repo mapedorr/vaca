@@ -253,7 +253,7 @@ func _show_dialogue(chr: PopochiuCharacter, msg := '') -> void:
 	if not visible: return
 	
 	play_text({
-		text = "%s: %s" % [chr.description, msg],
+		text = "%s: [color=white]%s[/color]" % [chr.description, msg],
 		color = chr.text_color,
 		position = PopochiuUtils.get_screen_coords_for(chr.dialog_pos).floor() / (
 			E.scale if E.settings.scale_gui else Vector2.ONE

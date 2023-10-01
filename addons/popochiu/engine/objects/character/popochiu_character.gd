@@ -75,7 +75,7 @@ func _play_walk(target_pos: Vector2) -> void:
 
 func _play_talk() -> void:
 	if not emotion.is_empty():
-		play_animation(emotion, "idle", false)
+		play_animation(emotion, "talk", false)
 	else:
 		play_animation('talk')
 

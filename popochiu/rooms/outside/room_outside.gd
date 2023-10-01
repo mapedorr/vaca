@@ -14,7 +14,7 @@ var state: Data = load('res://popochiu/rooms/outside/room_outside.tres')
 # What happens when Popochiu loads the room. At this point the room is in the
 # tree but it is not visible
 func _on_room_entered() -> void:
-	pass
+	C.Goddiu.face_left()
 
 
 # What happens when the room changing transition finishes. At this point the room
@@ -27,15 +27,18 @@ func _on_room_transition_finished() -> void:
 		"Goddiu(happy): Les tengo una [color=a9ff9f]buena[/color] y una [color=c46c71]mala[/color] noticia.",
 		"Popsy: ¿Qué pasí?",
 		"Goddiu: La [color=a9ff9f]buena noticia[/color] es que Papiu Mateiu hablará de nosotros en un lugarciu muy boniu.",
-		"Popochius: [wave][rainbow]Tííííííííííííííííííííííííííííííííí[/rainbow][/wave]",
+		E.queue_camera_shake_bg(.5, 3),
+		"Popochius: [wave][rainbow]Tíííííííííííííííííííí[/rainbow][/wave]",
 		"Goddiu(sad): La mala es que NO TIENE NI UN peso para salir del platanal.",
-		C.Popsy.queue_play_animation("sad"),
 		"Popsy(sad): Pobreciu.",
 		"Gonorrein(angry): [shake]¡Qué bobiu es Papiu Mateiu![/shake]",
 		"Chiquininin(sad): Ayyyy [wave]doooooooooooooo[/wave]",
 		"Carenalga: Sííííí mis popochius.",
 		"Carenalga(sad): Estoy en la B y no tengo cómo pagarme el viaje a Munich, Alemania.",
 		"Carenalga(sad): Lo siento muchíu...",
+		C.player.queue_face_right(),
+		"...",
+		C.player.queue_face_left(),
 		"...",
 		"Goddiu: ¡No te preocupes Papiu Mateiu!",
 		"Goddiu(happy): Nosotros te ayudandíu a conseguir el dineriu",
