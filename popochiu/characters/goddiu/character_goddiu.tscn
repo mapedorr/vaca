@@ -1,76 +1,13 @@
 [gd_scene load_steps=11 format=3 uid="uid://cvygsqbr47cnm"]
 
 [ext_resource type="Script" path="res://popochiu/characters/goddiu/character_goddiu.gd" id="1_g28dp"]
-[ext_resource type="Texture2D" uid="uid://by1tac1m5syrg" path="res://popochiu/characters/goddiu/goddiu_extended_v1.png" id="2_0u8cn"]
-[ext_resource type="Texture2D" uid="uid://d2xygj7a16816" path="res://popochiu/characters/goddiu/goddiu_avatar_normal.png" id="2_2226w"]
-[ext_resource type="Texture2D" uid="uid://cveqk6x1kfmyj" path="res://popochiu/characters/goddiu/goddiu_avatar_sad.png" id="3_u0140"]
-[ext_resource type="Texture2D" uid="uid://cdqdukoyh0jfg" path="res://popochiu/characters/goddiu/goddiu_avatar_happy.png" id="4_007ef"]
-
-[sub_resource type="Animation" id="Animation_6pccv"]
-length = 1.1
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = false
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("2_0u8cn")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:hframes")
-tracks/1/interp = 1
-tracks/1/loop_wrap = false
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [3]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D:vframes")
-tracks/2/interp = 1
-tracks/2/loop_wrap = false
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [2]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = false
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Sprite2D:frame")
-tracks/4/interp = 1
-tracks/4/loop_wrap = false
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
+[ext_resource type="Texture2D" uid="uid://d2xygj7a16816" path="res://popochiu/characters/goddiu/sprites/goddiu_avatar_normal.png" id="2_ecl10"]
+[ext_resource type="Texture2D" uid="uid://cveqk6x1kfmyj" path="res://popochiu/characters/goddiu/sprites/goddiu_avatar_sad.png" id="3_2g415"]
+[ext_resource type="Texture2D" uid="uid://cdqdukoyh0jfg" path="res://popochiu/characters/goddiu/sprites/goddiu_avatar_happy.png" id="4_yppnp"]
+[ext_resource type="Texture2D" uid="uid://by1tac1m5syrg" path="res://popochiu/characters/goddiu/sprites/goddiu_extended_v1.png" id="5_65qjn"]
 
 [sub_resource type="Animation" id="Animation_dglht"]
+resource_name = "happy"
 length = 0.3
 loop_mode = 1
 tracks/0/type = "value"
@@ -83,7 +20,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_0u8cn")]
+"values": [ExtResource("5_65qjn")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -134,6 +71,70 @@ tracks/4/keys = {
 "values": [0, 2]
 }
 
+[sub_resource type="Animation" id="Animation_6pccv"]
+length = 1.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_65qjn")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = false
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = false
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = false
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
 [sub_resource type="Animation" id="Animation_ou63g"]
 length = 0.2
 loop_mode = 1
@@ -147,7 +148,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_0u8cn")]
+"values": [ExtResource("5_65qjn")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -211,7 +212,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_0u8cn")]
+"values": [ExtResource("5_65qjn")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -264,8 +265,8 @@ tracks/4/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3ilc5"]
 _data = {
+"happy": SubResource("Animation_dglht"),
 "idle": SubResource("Animation_6pccv"),
-"jump": SubResource("Animation_dglht"),
 "talk": SubResource("Animation_ou63g"),
 "walk": SubResource("Animation_u73e3")
 }
@@ -274,19 +275,25 @@ _data = {
 script = ExtResource("1_g28dp")
 text_color = Color(0.4375, 0.425781, 0.917969, 1)
 flips_when = 2
+voices = [{
+"cue": "vo_goddiu",
+"emotion": "",
+"variations": 3
+}]
 avatars = [{
-"avatar": ExtResource("2_2226w"),
+"avatar": ExtResource("2_ecl10"),
 "emotion": ""
 }, {
-"avatar": ExtResource("3_u0140"),
+"avatar": ExtResource("3_2g415"),
 "emotion": "sad"
 }, {
-"avatar": ExtResource("4_007ef"),
+"avatar": ExtResource("4_yppnp"),
 "emotion": "happy"
 }]
 popochiu_placeholder = null
 script_name = "Goddiu"
 description = "Goddiu"
+clickable = false
 metadata/_popochiu_aseprite_config_ = {
 "o_folder": "",
 "o_name": "",
@@ -338,7 +345,7 @@ libraries = {
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, -25)
-texture = ExtResource("2_0u8cn")
+texture = ExtResource("5_65qjn")
 hframes = 3
 vframes = 2
 

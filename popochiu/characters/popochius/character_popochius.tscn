@@ -1,18 +1,19 @@
 [gd_scene load_steps=3 format=3 uid="uid://jxs7ihmcwhoq"]
 
 [ext_resource type="Script" path="res://popochiu/characters/popochius/character_popochius.gd" id="1_7la7o"]
-[ext_resource type="Texture2D" uid="uid://42bjq7an0urs" path="res://popochiu/characters/popochius/popochius_normal.png" id="2_0diax"]
+[ext_resource type="Texture2D" uid="uid://42bjq7an0urs" path="res://popochiu/characters/popochius/sprites/popochius_normal.png" id="2_cqxnd"]
 
 [node name="CharacterPopochius" type="Area2D"]
 script = ExtResource("1_7la7o")
 text_color = Color(0.458824, 0.807843, 0.784314, 1)
 avatars = [{
-"avatar": ExtResource("2_0diax"),
+"avatar": ExtResource("2_cqxnd"),
 "emotion": ""
 }]
 popochiu_placeholder = null
 script_name = "Popochius"
 description = "Popochius"
+clickable = false
 cursor = 8
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]

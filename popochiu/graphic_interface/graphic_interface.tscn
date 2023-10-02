@@ -1,15 +1,17 @@
-[gd_scene load_steps=11 format=3 uid="uid://cwvuu8g0ih3i8"]
+[gd_scene load_steps=8 format=3 uid="uid://cwvuu8g0ih3i8"]
 
 [ext_resource type="Script" path="res://addons/popochiu/engine/objects/graphic_interface/templates/bass/bass_gi.gd" id="1_268ni"]
-[ext_resource type="PackedScene" uid="uid://esorelppu4hw" path="res://addons/popochiu/engine/objects/graphic_interface/components/hover_text/hover_text.tscn" id="2_6qu0l"]
-[ext_resource type="PackedScene" uid="uid://cg18h3icrip1r" path="res://addons/popochiu/engine/objects/graphic_interface/components/dialog_text/dialog_text.tscn" id="2_v42aw"]
-[ext_resource type="PackedScene" uid="uid://bdgs3xsbq3gdd" path="res://addons/popochiu/engine/objects/graphic_interface/components/system_text/system_text.tscn" id="4_o82xq"]
-[ext_resource type="PackedScene" uid="uid://dhsfl8ot4j5fj" path="res://addons/popochiu/engine/objects/graphic_interface/components/dialog_menu/dialog_menu.tscn" id="5_ayg0j"]
-[ext_resource type="PackedScene" uid="uid://ciar5j7qm85bc" path="res://addons/popochiu/engine/objects/graphic_interface/components/inventory_bar/inventory_bar.tscn" id="6_ovwnh"]
-[ext_resource type="PackedScene" uid="uid://0cqerawlxb3o" path="res://addons/popochiu/engine/objects/graphic_interface/templates/bass/components/settings_bar/settings_bar.tscn" id="7_mtpwc"]
-[ext_resource type="PackedScene" uid="uid://dfrsiyyqncspo" path="res://addons/popochiu/engine/objects/graphic_interface/components/popups/history/history_popup.tscn" id="8_207hf"]
-[ext_resource type="PackedScene" uid="uid://cndputybyj57n" path="res://addons/popochiu/engine/objects/graphic_interface/components/popups/save_and_load/save_and_load_popup.tscn" id="9_ueme0"]
-[ext_resource type="PackedScene" uid="uid://dwxm2p1iyhpx6" path="res://addons/popochiu/engine/objects/graphic_interface/components/popups/sound_settings/sound_settings_popup.tscn" id="10_csjib"]
+[ext_resource type="FontFile" uid="uid://dixh1egf7k2fb" path="res://addons/popochiu/fonts/monkeyisland_1991.ttf" id="2_yhc54"]
+[ext_resource type="Script" path="res://addons/popochiu/engine/objects/graphic_interface/components/dialog_text/dialog_text.gd" id="3_krhti"]
+[ext_resource type="Texture2D" uid="uid://h156lkhxk5tl" path="res://addons/popochiu/engine/objects/graphic_interface/components/dialog_text/dialog_continue.png" id="4_63pl1"]
+[ext_resource type="Script" path="res://addons/popochiu/engine/objects/graphic_interface/components/dialog_text/portrait_text_panel.gd" id="5_x7tt2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y1fsn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cff0b"]
+bg_color = Color(0, 0, 0, 1)
+expand_margin_left = 4.0
+expand_margin_right = 4.0
 
 [node name="BassGI" type="Control"]
 layout_mode = 3
@@ -21,46 +23,7 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_268ni")
 
-[node name="DialogText" parent="." instance=ExtResource("2_v42aw")]
-layout_mode = 1
-
-[node name="HoverText" parent="." instance=ExtResource("2_6qu0l")]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -19.0
-offset_bottom = -4.0
-grow_vertical = 0
-
-[node name="SystemText" parent="." instance=ExtResource("4_o82xq")]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -120.0
-offset_top = -12.0
-offset_right = 120.0
-offset_bottom = 12.0
-
-[node name="DialogMenu" parent="." instance=ExtResource("5_ayg0j")]
-layout_mode = 1
-
-[node name="InventoryBar" parent="." instance=ExtResource("6_ovwnh")]
-layout_mode = 0
-offset_left = 4.0
-offset_right = 40.0
-
-[node name="SettingsBar" parent="." instance=ExtResource("7_mtpwc")]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -126.0
-offset_right = -4.0
-grow_horizontal = 0
-
-[node name="Popups" type="Control" parent="."]
+[node name="DialogText" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -69,14 +32,145 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="HistoryPopup" parent="Popups" instance=ExtResource("8_207hf")]
+[node name="AboveCharacter" type="RichTextLabel" parent="DialogText"]
 visible = false
-layout_mode = 1
+clip_contents = false
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+offset_right = 16.0
+offset_bottom = 16.0
+size_flags_horizontal = 0
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/normal_font = ExtResource("2_yhc54")
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+meta_underlined = false
+script = ExtResource("3_krhti")
 
-[node name="SaveAndLoadPopup" parent="Popups" instance=ExtResource("9_ueme0")]
-visible = false
+[node name="ContinueIcon" type="TextureProgressBar" parent="DialogText/AboveCharacter"]
+texture_filter = 1
 layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -16.0
+offset_bottom = 16.0
+grow_horizontal = 0
+value = 100.0
+fill_mode = 2
+texture_progress = ExtResource("4_63pl1")
 
-[node name="SoundSettingsPopup" parent="Popups" instance=ExtResource("10_csjib")]
-visible = false
+[node name="PortraitTextPanel" type="PanelContainer" parent="DialogText"]
 layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -173.0
+offset_right = -8.0
+offset_bottom = -121.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_y1fsn")
+script = ExtResource("5_x7tt2")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="DialogText/PortraitTextPanel"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="LeftAvatar" type="TextureRect" parent="DialogText/PortraitTextPanel/HBoxContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+stretch_mode = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="DialogText/PortraitTextPanel/HBoxContainer"]
+custom_minimum_size = Vector2(192, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_cff0b")
+
+[node name="PortraitText" type="RichTextLabel" parent="DialogText/PortraitTextPanel/HBoxContainer/PanelContainer"]
+unique_name_in_owner = true
+clip_contents = false
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/normal_font = ExtResource("2_yhc54")
+bbcode_enabled = true
+text = "[wave]¿TU TÚ?[/wave]"
+scroll_active = false
+meta_underlined = false
+script = ExtResource("3_krhti")
+used_when = 1
+
+[node name="ContinueIcon" type="TextureProgressBar" parent="DialogText/PortraitTextPanel/HBoxContainer/PanelContainer/PortraitText"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -16.0
+offset_top = 35.0
+offset_bottom = 51.0
+grow_horizontal = 0
+value = 100.0
+fill_mode = 2
+texture_progress = ExtResource("4_63pl1")
+
+[node name="RightAvatar" type="TextureRect" parent="DialogText/PortraitTextPanel/HBoxContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(24, 48)
+layout_mode = 2
+size_flags_vertical = 4
+stretch_mode = 3
+
+[node name="Caption" type="RichTextLabel" parent="DialogText"]
+visible = false
+clip_contents = false
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -20.0
+offset_right = -20.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 0
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/normal_font = ExtResource("2_yhc54")
+bbcode_enabled = true
+text = "[center]Hi my friend[/center]"
+fit_content = true
+scroll_active = false
+meta_underlined = false
+script = ExtResource("3_krhti")
+used_when = 2
+
+[node name="ContinueIcon" type="TextureProgressBar" parent="DialogText/Caption"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 0
+value = 100.0
+fill_mode = 2
+texture_progress = ExtResource("4_63pl1")

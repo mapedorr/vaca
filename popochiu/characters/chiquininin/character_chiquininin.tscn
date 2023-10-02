@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://ceiwbdcyh4hhx"]
+[gd_scene load_steps=12 format=3 uid="uid://ceiwbdcyh4hhx"]
 
 [ext_resource type="Script" path="res://popochiu/characters/chiquininin/character_chiquininin.gd" id="1_76x7f"]
-[ext_resource type="Texture2D" uid="uid://due3fyaicvm5d" path="res://popochiu/characters/chiquininin/chiquininin_happy.png" id="2_lf5fk"]
-[ext_resource type="Texture2D" uid="uid://c4effkatrp4ne" path="res://popochiu/characters/chiquininin/chiquininin.png" id="2_w7dqy"]
-[ext_resource type="Texture2D" uid="uid://013dkiuq7ng1" path="res://popochiu/autoloads/chiquininin_sad.png" id="3_ako1t"]
+[ext_resource type="Texture2D" uid="uid://due3fyaicvm5d" path="res://popochiu/characters/chiquininin/sprites/chiquininin_happy.png" id="2_3450e"]
+[ext_resource type="Texture2D" uid="uid://l06enp15sosh" path="res://popochiu/characters/chiquininin/sprites/chiquininin_normal.png" id="2_l3mha"]
+[ext_resource type="Texture2D" uid="uid://013dkiuq7ng1" path="res://popochiu/characters/chiquininin/sprites/chiquininin_sad.png" id="3_bndoh"]
+[ext_resource type="Texture2D" uid="uid://c4effkatrp4ne" path="res://popochiu/characters/chiquininin/sprites/chiquininin.png" id="4_m1mky"]
 
 [sub_resource type="Animation" id="Animation_ygok6"]
 length = 0.5
@@ -18,7 +19,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_w7dqy")]
+"values": [ExtResource("4_m1mky")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -82,7 +83,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_w7dqy")]
+"values": [ExtResource("4_m1mky")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -146,7 +147,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_w7dqy")]
+"values": [ExtResource("4_m1mky")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -210,7 +211,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_w7dqy")]
+"values": [ExtResource("4_m1mky")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -274,7 +275,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_w7dqy")]
+"values": [ExtResource("4_m1mky")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -337,16 +338,25 @@ _data = {
 [node name="CharacterChiquininin" type="Area2D"]
 script = ExtResource("1_76x7f")
 text_color = Color(0.660156, 0.996094, 0.621094, 1)
+voices = [{
+"cue": "vo_chiquininin",
+"emotion": "",
+"variations": 3
+}]
 avatars = [{
-"avatar": ExtResource("2_lf5fk"),
+"avatar": ExtResource("2_l3mha"),
+"emotion": ""
+}, {
+"avatar": ExtResource("2_3450e"),
 "emotion": "happy"
 }, {
-"avatar": ExtResource("3_ako1t"),
+"avatar": ExtResource("3_bndoh"),
 "emotion": "sad"
 }]
 popochiu_placeholder = null
 script_name = "Chiquininin"
 description = "Chiquininin"
+clickable = false
 metadata/_popochiu_aseprite_config_ = {
 "o_folder": "",
 "o_name": "",
@@ -382,12 +392,10 @@ metadata/_popochiu_aseprite_config_ = {
 polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
 
 [node name="BaselineHelper" type="Line2D" parent="."]
-visible = false
 points = PackedVector2Array(-10000, 0, 10000, 0)
 width = 1.0
 
 [node name="WalkToHelper" type="Marker2D" parent="."]
-visible = false
 
 [node name="ColorRect" type="ColorRect" parent="WalkToHelper"]
 offset_left = -2.5
@@ -404,9 +412,8 @@ libraries = {
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, -22)
-texture = ExtResource("2_w7dqy")
+texture = ExtResource("4_m1mky")
 hframes = 3
 vframes = 3
 
 [node name="DialogPos" type="Marker2D" parent="."]
-visible = false

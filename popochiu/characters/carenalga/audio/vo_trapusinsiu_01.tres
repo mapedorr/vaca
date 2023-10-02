@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="AudioCueSound" load_steps=3 format=3 uid="uid://cuktrx4dg7xsn"]
+
+[ext_resource type="AudioStream" uid="uid://tv3pt8lyg0us" path="res://popochiu/characters/carenalga/audio/vo_trapusinsiu_01.ogg" id="1_27wmb"]
+[ext_resource type="Script" path="res://addons/popochiu/engine/audio_manager/audio_cue_sound.gd" id="2_avd8q"]
+
+[resource]
+resource_name = "vo_trapusinsiu_01"
+script = ExtResource("2_avd8q")
+audio = ExtResource("1_27wmb")
+loop = false
+is_2d = false
+pitch = 1.0
+volume = 0.0
+rnd_pitch = Vector2(0, 0)
+rnd_volume = Vector2(0, 0)
+max_distance = 2000
+attenuation = 1.0
+bus = "Voices"

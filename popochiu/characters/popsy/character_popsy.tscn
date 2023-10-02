@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://cpgsu8py8423f"]
 
 [ext_resource type="Script" path="res://popochiu/characters/popsy/character_popsy.gd" id="1_wt53f"]
-[ext_resource type="Texture2D" uid="uid://cl4falettx01l" path="res://popochiu/characters/popsy/popochiu-popsy.png" id="2_r66n6"]
-[ext_resource type="Texture2D" uid="uid://c2jhi2k8kcc12" path="res://popochiu/characters/popsy/popsy_normal.png" id="2_wtkwk"]
-[ext_resource type="Texture2D" uid="uid://5q8khcup2w57" path="res://popochiu/characters/popsy/popsy_sad.png" id="3_wjdcf"]
+[ext_resource type="Texture2D" uid="uid://c2jhi2k8kcc12" path="res://popochiu/characters/popsy/sprites/popsy_normal.png" id="2_kadl7"]
+[ext_resource type="Texture2D" uid="uid://5q8khcup2w57" path="res://popochiu/characters/popsy/sprites/popsy_sad.png" id="3_hffot"]
+[ext_resource type="Texture2D" uid="uid://cl4falettx01l" path="res://popochiu/characters/popsy/sprites/popochiu-popsy.png" id="4_v2hqf"]
 
 [sub_resource type="Animation" id="Animation_cu64o"]
 length = 2.75
@@ -18,7 +18,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_r66n6")]
+"values": [ExtResource("4_v2hqf")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -82,7 +82,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_r66n6")]
+"values": [ExtResource("4_v2hqf")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -147,7 +147,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_r66n6")]
+"values": [ExtResource("4_v2hqf")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -211,7 +211,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_r66n6")]
+"values": [ExtResource("4_v2hqf")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -273,16 +273,22 @@ _data = {
 [node name="CharacterPopsy" type="Area2D"]
 script = ExtResource("1_wt53f")
 text_color = Color(0.765625, 0.421875, 0.441406, 1)
+voices = [{
+"cue": "vo_popsy",
+"emotion": "",
+"variations": 3
+}]
 avatars = [{
-"avatar": ExtResource("2_wtkwk"),
+"avatar": ExtResource("2_kadl7"),
 "emotion": ""
 }, {
-"avatar": ExtResource("3_wjdcf"),
+"avatar": ExtResource("3_hffot"),
 "emotion": "sad"
 }]
 popochiu_placeholder = null
 script_name = "Popsy"
 description = "Popsy"
+clickable = false
 cursor = 8
 metadata/_popochiu_aseprite_config_ = {
 "o_folder": "",
@@ -315,12 +321,10 @@ metadata/_popochiu_aseprite_config_ = {
 polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
 
 [node name="BaselineHelper" type="Line2D" parent="."]
-visible = false
 points = PackedVector2Array(-10000, 0, 10000, 0)
 width = 1.0
 
 [node name="WalkToHelper" type="Marker2D" parent="."]
-visible = false
 
 [node name="ColorRect" type="ColorRect" parent="WalkToHelper"]
 offset_left = -2.5
@@ -336,10 +340,9 @@ libraries = {
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("2_r66n6")
+texture = ExtResource("4_v2hqf")
 hframes = 3
 vframes = 3
 frame = 3
 
 [node name="DialogPos" type="Marker2D" parent="."]
-visible = false

@@ -242,7 +242,7 @@ func say(dialog: String, emo := "") -> void:
 	
 	var vo_name := _get_vo_cue(emotion)
 	if vo_name:
-		A.play(vo_name, false, global_position)
+		A[vo_name].play(false, global_position)
 	
 	C.character_spoke.emit(self, dialog)
 	
@@ -500,6 +500,24 @@ func _get_vo_cue(emotion := '') -> String:
 				cue_name += '_' + str(idx + 1).pad_zeros(2)
 			
 			return cue_name
+	
+	# Use fallback voices if any
+	for v in voices:
+		if v.emotion.is_empty():
+			var cue_name: String = v.cue
+			
+			if v.variations:
+				if not v.has('not_played') or v.not_played.is_empty():
+					v['not_played'] = range(v.variations)
+				
+				var idx: int = (v['not_played'] as Array).pop_at(
+					PopochiuUtils.get_random_array_idx(v['not_played'])
+				)
+				
+				cue_name += '_' + str(idx + 1).pad_zeros(2)
+			
+			return cue_name
+	
 	return ''
 
 

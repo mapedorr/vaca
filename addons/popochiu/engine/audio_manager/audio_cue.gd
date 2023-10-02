@@ -5,7 +5,7 @@ class_name PopochiuAudioCue
 @export var audio: AudioStream
 @export var loop := false : set = set_loop
 @export var is_2d := false
-@export var pitch := 0.0 : get = get_pitch
+@export var pitch := 0.0
 @export var volume := 0.0
 @export var rnd_pitch := Vector2.ZERO
 @export var rnd_volume := Vector2.ZERO
@@ -26,7 +26,7 @@ func fade(
 ) -> void:
 	if wait_to_end:
 		await E.am.play_fade_cue(
-			resource_name, 
+			resource_name,
 			duration,
 			from,
 			to,
