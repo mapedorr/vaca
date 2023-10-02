@@ -40,7 +40,7 @@ tracks/0/path = NodePath("Control/Message:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 5, 6),
+"times": PackedFloat32Array(0, 1, 5, 5.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -52,7 +52,7 @@ tracks/1/path = NodePath("Control/CallToAction:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 5.5, 6.5),
+"times": PackedFloat32Array(0, 5.3, 5.6),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -130,18 +130,18 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 26.0
-offset_top = 31.0
+offset_top = 38.0
 offset_right = -26.0
-offset_bottom = -35.0
+offset_bottom = -27.0
 grow_horizontal = 2
 grow_vertical = 2
 bbcode_enabled = true
 text = "[center]Puedes hacer tu aporte en cualquiera de estas opciones:
 
-[color=edf171]https://vaki.co/popochiu_godotcon2023[/color]
 [color=75cec8]Bancolombia (ahorros): 20337178074[/color]
 [color=c46c71]Nequi: 320 392 6075[/color]
-[color=a9ff9f]PayPal: mapedorr@gmail.com[/color]
+
+
 
 [rainbow]¡Los popochius y yo te lo agradeceremos![/rainbow][/center]"
 scroll_active = false
