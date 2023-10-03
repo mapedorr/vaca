@@ -1,0 +1,107 @@
+# Translations template for PROJECT.
+# Copyright (C) 2023 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <mapedorr@gmail.com>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: mapedorr@gmail.com\n"
+"POT-Creation-Date: 2023-09-19 12:39-0500\n"
+"PO-Revision-Date: 2023-10-03 05:06-0500\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.12.1\n"
+"X-Generator: Poedit 3.4\n"
+
+# Outside
+msgid "Oñiiiiiii."
+msgstr "Hiiiiiii."
+
+msgid ""
+"Les tengo una [color=a9ff9f]buena[/color] y una [color=c46c71]mala[/color] "
+"noticia."
+msgstr ""
+"I have [color=a9ff9f]good news[/color] and [color=c46c71]bad news[/color] "
+"for all."
+
+msgid "¿Qué pasí?"
+msgstr "What's up?"
+
+msgid ""
+"La [color=a9ff9f]buena noticia[/color] es que Papiu Mateiu hablará de "
+"nosotros en un lugarciu muy boniu."
+msgstr ""
+"The [color=a9ff9f]good news[/color] is that Papiu Mateiu will talk about us "
+"in a very nice placeciu."
+
+msgid "[shake][rainbow]Tííííííííííííííííí[/rainbow][/shake]"
+msgstr "[shake][rainbow]Yeeeeeyyyyyyyy[/rainbow][/shake]"
+
+msgid ""
+"La mala es que [color=c46c71]NO TIENE EL DINERO SUFICIENTE[/color] para "
+"salir del platanal."
+msgstr ""
+"The bad news is that [color=c46c71]HE DOESN'T HAVE ENOUGH MONEY[/color] to "
+"get out of Colombia."
+
+msgid "No tengo cómo pagarme el viaje a Munich, Alemania."
+msgstr "I don't have the means to pay for my trip to Munich, Germany."
+
+msgid "¡¡¡TENEMOS QUE CONSEGUIR EL DINERIU!!!"
+msgstr "WE NEED TO GET THE MONEY!!!"
+
+msgid ""
+"¿Qué tal si le pedimos ayuda [color=a9ff9f]¡¡¡A QUIENES NOS ESTÁN VIENDO!!![/"
+"color]?"
+msgstr ""
+"How about we ask for help [color=edf171]FROM THOSE WHO ARE WATCHING!!![/"
+"color]?"
+
+msgid "¡Qué buena idea!"
+msgstr "That's a great idea!"
+
+msgid ""
+"¿Nos ayudarías para que Papiu Mateiu pueda hablar de nosotros en Mamemania?"
+msgstr ""
+"Would you help us so that Papiu Mateiu can talk about us on Munichermany?"
+
+# Room End
+msgid ""
+"[center]Esta pequeña escena se construyó con [color=edf171]POPOCHIU[/color], "
+"la herramienta que presentaré en la [color=706deb]GodotCon 2023[/color] si "
+"con [color=a9ff9f]TU AYUDA[/color] consigo el dinero para ir.[/center]"
+msgstr ""
+"[center]This little scene was built with [color=edf171]POPOCHIU[/color], the "
+"tool I will be presenting at [color=706deb]GodotCon 2023[/color] if I can "
+"get [color=a9ff9f]YOUR HELP[/color] to cover the expenses.[/center]"
+
+msgid ""
+"[center]Puedes hacer tu aporte en cualquiera de estas opciones:\n"
+"\n"
+"[color=75cec8]Bancolombia (ahorros): 20337178074[/color]\n"
+"[color=c46c71]Nequi: 320 392 6075[/color]\n"
+"\n"
+"\n"
+"\n"
+"[rainbow]¡Los popochius y yo te lo agradeceremos![/rainbow][/center]"
+msgstr ""
+"[center]You can help by donating to my PayPal or to the project:\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"[rainbow]The popochius and I will thank you for it![/rainbow][/center]"
+
+#~ msgid "[center]Puedes hacer tu aporte en cualquiera de estas opciones:"
+#~ msgstr ""
+#~ "[color=75cec8]Bancolombia (ahorros): 20337178074[/color]"
+#~ "[color=c46c71]Nequi: 320 392 6075[/color][rainbow]¡Los popochius y yo te "
+#~ "lo agradeceremos![/rainbow][/center]"

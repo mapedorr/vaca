@@ -1,0 +1,28 @@
+# LANGUAGE translation for vaca for the following files:
+# res://popochiu/rooms/end/room_end.tscn
+#
+# FIRST AUTHOR < EMAIL @ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: vaca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: popochiu/rooms/end/room_end.tscn
+msgid "[center]Esta pequeña escena se construyó con [color=edf171]POPOCHIU[/color], la herramienta que presentaré en la [color=706deb]GodotCon 2023[/color] si con [color=a9ff9f]TU AYUDA[/color] consigo el dinero para ir.[/center]"
+msgstr ""
+
+#: popochiu/rooms/end/room_end.tscn
+msgid ""
+"[center]Puedes hacer tu aporte en cualquiera de estas opciones:\n"
+"\n"
+"[color=75cec8]Bancolombia (ahorros): 20337178074[/color]\n"
+"[color=c46c71]Nequi: 320 392 6075[/color]\n"
+"\n"
+"\n"
+"\n"
+"[rainbow]¡Los popochius y yo te lo agradeceremos![/rainbow][/center]"
+msgstr ""
