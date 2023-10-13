@@ -142,6 +142,7 @@ _data = {
 [node name="CharacterGonorrein" type="Area2D"]
 script = ExtResource("1_4esww")
 text_color = Color(0.554688, 0.234375, 0.589844, 1)
+flips_when = 2
 voices = [{
 "cue": "vo_gonorrein",
 "emotion": "",

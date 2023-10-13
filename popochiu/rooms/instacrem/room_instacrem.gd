@@ -14,14 +14,18 @@ var state: Data = load('res://popochiu/rooms/instacrem/room_instacrem.tres')
 # What happens when Popochiu loads the room. At this point the room is in the
 # tree but it is not visible
 func _on_room_entered() -> void:
-	pass
+	Cursor.hide()
+	C.Chiquininin.face_left()
 
 
 # What happens when the room changing transition finishes. At this point the room
 # is visible.
 func _on_room_transition_finished() -> void:
-	# You can use await E.queue([]) to excecute a sequence of instructions
-	pass
+	E.queue([
+		"Chiquininin(happy): [wave]¡¡¡Papiu Mateiu nos llevará a Mamemania!!![/wave]",
+		"Gonorrein: ¿Ya consiguió el dineríu?",
+		"Chiquininin: [shake]Emmmm....[/shake]"
+	])
 
 
 # What happens before Popochiu unloads the room.

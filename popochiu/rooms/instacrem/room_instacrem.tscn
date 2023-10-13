@@ -1,6 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://dca1u8205b58t"]
+[gd_scene load_steps=17 format=3 uid="uid://dca1u8205b58t"]
 
 [ext_resource type="Script" path="res://popochiu/rooms/instacrem/room_instacrem.gd" id="1_5curs"]
+[ext_resource type="PackedScene" uid="uid://cwryunl0osju4" path="res://popochiu/rooms/instacrem/props/bg/prop_bg.tscn" id="2_dngnu"]
+[ext_resource type="PackedScene" uid="uid://uvtywyf3pq1a" path="res://addons/popochiu/engine/objects/walkable_area/popochiu_walkable_area.tscn" id="2_hlcuo"]
+[ext_resource type="Script" path="res://addons/popochiu/engine/objects/prop/popochiu_prop.gd" id="3_8l5xh"]
+[ext_resource type="Script" path="res://popochiu/rooms/instacrem/walkable_areas/floor/walkable_area_floor.gd" id="3_ndl17"]
+[ext_resource type="Texture2D" uid="uid://kmnhpdlabvxq" path="res://popochiu/rooms/instacrem/props/bg/bg.png" id="4_sdkgr"]
+[ext_resource type="PackedScene" uid="uid://vpoveyik0tif" path="res://popochiu/characters/gonorrein/character_gonorrein.tscn" id="7_m2eym"]
+[ext_resource type="Script" path="res://popochiu/characters/gonorrein/character_gonorrein.gd" id="8_0e1o2"]
+[ext_resource type="Texture2D" uid="uid://7rprax8fsv5n" path="res://popochiu/characters/gonorrein/sprites/gonorrein_normal.png" id="9_ufkig"]
+[ext_resource type="Texture2D" uid="uid://svg1rcr7tw5a" path="res://popochiu/characters/gonorrein/sprites/gonorrein_angry.png" id="10_luso0"]
+[ext_resource type="PackedScene" uid="uid://ceiwbdcyh4hhx" path="res://popochiu/characters/chiquininin/character_chiquininin.tscn" id="11_4joh4"]
+[ext_resource type="Script" path="res://popochiu/characters/chiquininin/character_chiquininin.gd" id="12_4dqr3"]
+[ext_resource type="Texture2D" uid="uid://l06enp15sosh" path="res://popochiu/characters/chiquininin/sprites/chiquininin_normal.png" id="13_ru6rd"]
+[ext_resource type="Texture2D" uid="uid://due3fyaicvm5d" path="res://popochiu/characters/chiquininin/sprites/chiquininin_happy.png" id="14_dsebl"]
+[ext_resource type="Texture2D" uid="uid://013dkiuq7ng1" path="res://popochiu/characters/chiquininin/sprites/chiquininin_sad.png" id="15_mq1qb"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_2cpc2"]
+vertices = PackedVector2Array(62, 32, -32, 34, -71, 22, -50, -2, 10, -23, 19, -14, -55, -18, 41, -13, 47, -20, 97, -12, 109, 5)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(3, 6, 4), PackedInt32Array(0, 5, 7), PackedInt32Array(8, 9, 10, 0, 7)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-55, -18, 10, -23, 19, -14, 41, -13, 47, -20, 97, -12, 109, 5, 62, 32, -32, 34, -71, 22, -50, -2)])
 
 [node name="RoomInstacrem" type="Node2D"]
 script = ExtResource("1_5curs")
@@ -8,7 +27,28 @@ script_name = "Instacrem"
 
 [node name="WalkableAreas" type="Node2D" parent="."]
 
+[node name="Floor" type="Node2D" parent="WalkableAreas" instance=ExtResource("2_hlcuo")]
+position = Vector2(132, 215)
+script = ExtResource("3_ndl17")
+script_name = "Floor"
+description = "Floor"
+
+[node name="Perimeter" type="NavigationRegion2D" parent="WalkableAreas/Floor"]
+modulate = Color(0, 1, 0, 1)
+navigation_polygon = SubResource("NavigationPolygon_2cpc2")
+
 [node name="Props" type="Node2D" parent="."]
+
+[node name="Bg" type="Area2D" parent="Props" instance=ExtResource("2_dngnu")]
+z_index = -1
+position = Vector2(135, 135)
+script = ExtResource("3_8l5xh")
+texture = ExtResource("4_sdkgr")
+script_name = "Bg"
+description = "Bg"
+clickable = false
+baseline = -135
+cursor = 1
 
 [node name="Hotspots" type="Node2D" parent="."]
 
@@ -17,3 +57,97 @@ script_name = "Instacrem"
 [node name="Markers" type="Node2D" parent="."]
 
 [node name="Characters" type="Node2D" parent="."]
+
+[node name="CharacterGonorrein *" type="Area2D" parent="Characters" instance=ExtResource("7_m2eym")]
+position = Vector2(114, 203)
+script = ExtResource("8_0e1o2")
+text_color = Color(0.554688, 0.234375, 0.589844, 1)
+voices = [{
+"cue": "vo_gonorrein",
+"emotion": "",
+"variations": 3
+}]
+avatars = [{
+"avatar": ExtResource("9_ufkig"),
+"emotion": ""
+}, {
+"avatar": ExtResource("10_luso0"),
+"emotion": "angry"
+}]
+popochiu_placeholder = null
+script_name = "Gonorrein"
+description = "Gonorrein"
+clickable = false
+cursor = 8
+metadata/_popochiu_aseprite_config_ = {
+"o_folder": "",
+"o_name": "",
+"only_visible_layers": false,
+"op_exp": true,
+"player": "/root/@EditorNode@17637/@Control@697/@Panel@698/@VBoxContainer@706/@HSplitContainer@709/@HSplitContainer@717/@HSplitContainer@725/@VBoxContainer@726/@VSplitContainer@728/@VSplitContainer@754/@VBoxContainer@755/@PanelContainer@800/MainScreen/@CanvasItemEditor@10090/@VSplitContainer@9915/@HSplitContainer@9917/@HSplitContainer@9919/@Control@9920/@SubViewportContainer@9921/@SubViewport@9922/CharacterGonorrein/AnimationPlayer",
+"source": "res://popochiu/characters/gonorrein/gonorrein.aseprite",
+"tags": [{
+"import": true,
+"loops": true,
+"tag_name": "idle"
+}, {
+"import": true,
+"loops": true,
+"tag_name": "angry"
+}],
+"wipe_old_anims": true
+}
+
+[node name="CharacterChiquininin *" type="Area2D" parent="Characters" instance=ExtResource("11_4joh4")]
+position = Vector2(212, 217)
+script = ExtResource("12_4dqr3")
+text_color = Color(0.660156, 0.996094, 0.621094, 1)
+voices = [{
+"cue": "vo_chiquininin",
+"emotion": "",
+"variations": 3
+}]
+avatars = [{
+"avatar": ExtResource("13_ru6rd"),
+"emotion": ""
+}, {
+"avatar": ExtResource("14_dsebl"),
+"emotion": "happy"
+}, {
+"avatar": ExtResource("15_mq1qb"),
+"emotion": "sad"
+}]
+popochiu_placeholder = null
+script_name = "Chiquininin"
+description = "Chiquininin"
+clickable = false
+metadata/_popochiu_aseprite_config_ = {
+"o_folder": "",
+"o_name": "",
+"only_visible_layers": false,
+"op_exp": true,
+"player": "/root/@EditorNode@17637/@Control@697/@Panel@698/@VBoxContainer@706/@HSplitContainer@709/@HSplitContainer@717/@HSplitContainer@725/@VBoxContainer@726/@VSplitContainer@728/@VSplitContainer@754/@VBoxContainer@755/@PanelContainer@800/MainScreen/@CanvasItemEditor@10090/@VSplitContainer@9915/@HSplitContainer@9917/@HSplitContainer@9919/@Control@9920/@SubViewportContainer@9921/@SubViewport@9922/CharacterChiquininin/AnimationPlayer",
+"source": "res://popochiu/characters/chiquininin/chiquininin.aseprite",
+"tags": [{
+"import": true,
+"loops": true,
+"tag_name": "idle"
+}, {
+"import": true,
+"loops": true,
+"tag_name": "walk"
+}, {
+"import": true,
+"loops": true,
+"tag_name": "talk"
+}, {
+"import": true,
+"loops": true,
+"tag_name": "sad"
+}, {
+"import": true,
+"loops": true,
+"tag_name": "happy"
+}],
+"wipe_old_anims": true
+}
