@@ -459,29 +459,34 @@ func _copy_gui_template(template_name: String) -> void:
 		"empty":
 			gui_path += "popochiu_graphic_interface.tscn"
 	
-	if not FileAccess.file_exists(PopochiuResources.GRAPHIC_INTERFACE_POPOCHIU):
-		DirAccess.make_dir_recursive_absolute(
-			PopochiuResources.GRAPHIC_INTERFACE_POPOCHIU.get_base_dir()
-		)
-	
-	DirAccess.copy_absolute(
-		gui_path,
-		PopochiuResources.GRAPHIC_INTERFACE_POPOCHIU
-	)
-	
-	# Refresh FileSystem
-	_editor_file_system.scan()
-	await _editor_file_system.filesystem_changed
-	
-	# Save the GI template in Settings
 	var settings := PopochiuResources.get_settings()
-	settings.graphic_interface = load(PopochiuResources.GRAPHIC_INTERFACE_POPOCHIU)
-	PopochiuResources.save_settings(settings)
 	
-	var commands_path := gui_path.replace("gi.tscn", "commands.gd")
+	if gui_path == settings.graphic_interface.resource_path:
+		prints("No hubo cambio de plantilla!!!")
 	
-	if not FileAccess.file_exists(commands_path):
-		commands_path = ""
-	
-	PopochiuResources.set_data_value('ui', 'template', template_name)
-	PopochiuResources.set_data_value('ui', 'commands', commands_path)
+#	if not FileAccess.file_exists(PopochiuResources.GRAPHIC_INTERFACE_POPOCHIU):
+#		DirAccess.make_dir_recursive_absolute(
+#			PopochiuResources.GRAPHIC_INTERFACE_POPOCHIU.get_base_dir()
+#		)
+#
+#	DirAccess.copy_absolute(
+#		gui_path,
+#		PopochiuResources.GRAPHIC_INTERFACE_POPOCHIU
+#	)
+#
+#	# Refresh FileSystem
+#	_editor_file_system.scan()
+#	await _editor_file_system.filesystem_changed
+#
+#	# Save the GI template in Settings
+#	var settings := PopochiuResources.get_settings()
+#	settings.graphic_interface = load(PopochiuResources.GRAPHIC_INTERFACE_POPOCHIU)
+#	PopochiuResources.save_settings(settings)
+#
+#	var commands_path := gui_path.replace("gi.tscn", "commands.gd")
+#
+#	if not FileAccess.file_exists(commands_path):
+#		commands_path = ""
+#
+#	PopochiuResources.set_data_value('ui', 'template', template_name)
+#	PopochiuResources.set_data_value('ui', 'commands', commands_path)

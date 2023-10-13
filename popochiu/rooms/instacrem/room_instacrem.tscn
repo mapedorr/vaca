@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://dca1u8205b58t"]
+
+[ext_resource type="Script" path="res://popochiu/rooms/instacrem/room_instacrem.gd" id="1_5curs"]
+
+[node name="RoomInstacrem" type="Node2D"]
+script = ExtResource("1_5curs")
+script_name = "Instacrem"
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Props" type="Node2D" parent="."]
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="Characters" type="Node2D" parent="."]

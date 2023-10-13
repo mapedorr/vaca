@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cwvuu8g0ih3i8"]
+[gd_scene load_steps=9 format=3 uid="uid://cwvuu8g0ih3i8"]
 
 [ext_resource type="Script" path="res://addons/popochiu/engine/objects/graphic_interface/templates/bass/bass_gi.gd" id="1_268ni"]
-[ext_resource type="FontFile" uid="uid://dixh1egf7k2fb" path="res://addons/popochiu/fonts/monkeyisland_1991.ttf" id="2_yhc54"]
-[ext_resource type="Script" path="res://addons/popochiu/engine/objects/graphic_interface/components/dialog_text/dialog_text.gd" id="3_krhti"]
-[ext_resource type="Texture2D" uid="uid://h156lkhxk5tl" path="res://addons/popochiu/engine/objects/graphic_interface/components/dialog_text/dialog_continue.png" id="4_63pl1"]
-[ext_resource type="Script" path="res://addons/popochiu/engine/objects/graphic_interface/components/dialog_text/portrait_text_panel.gd" id="5_x7tt2"]
+[ext_resource type="FontFile" uid="uid://dixh1egf7k2fb" path="res://addons/popochiu/fonts/monkeyisland_1991.ttf" id="2_xlvfi"]
+[ext_resource type="Script" path="res://addons/popochiu/engine/objects/graphic_interface/components/dialog_text/dialog_text.gd" id="3_57j2s"]
+[ext_resource type="Texture2D" uid="uid://h156lkhxk5tl" path="res://addons/popochiu/engine/objects/graphic_interface/components/dialog_text/dialog_continue.png" id="4_eaoyj"]
+[ext_resource type="Script" path="res://addons/popochiu/engine/objects/graphic_interface/components/dialog_text/portrait_text_panel.gd" id="5_3vats"]
+[ext_resource type="PackedScene" uid="uid://dhsfl8ot4j5fj" path="res://addons/popochiu/engine/objects/graphic_interface/components/dialog_menu/dialog_menu.tscn" id="5_ayg0j"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y1fsn"]
 
@@ -43,12 +44,12 @@ size_flags_horizontal = 0
 mouse_filter = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
-theme_override_fonts/normal_font = ExtResource("2_yhc54")
+theme_override_fonts/normal_font = ExtResource("2_xlvfi")
 bbcode_enabled = true
 fit_content = true
 scroll_active = false
 meta_underlined = false
-script = ExtResource("3_krhti")
+script = ExtResource("3_57j2s")
 
 [node name="ContinueIcon" type="TextureProgressBar" parent="DialogText/AboveCharacter"]
 texture_filter = 1
@@ -61,22 +62,20 @@ offset_bottom = 16.0
 grow_horizontal = 0
 value = 100.0
 fill_mode = 2
-texture_progress = ExtResource("4_63pl1")
+texture_progress = ExtResource("4_eaoyj")
 
 [node name="PortraitTextPanel" type="PanelContainer" parent="DialogText"]
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 8.0
-offset_top = -173.0
-offset_right = -8.0
-offset_bottom = -121.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -126.0
+offset_top = 8.0
+offset_right = 122.0
+offset_bottom = 56.0
 grow_horizontal = 2
-grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_y1fsn")
-script = ExtResource("5_x7tt2")
+script = ExtResource("5_3vats")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="DialogText/PortraitTextPanel"]
 layout_mode = 2
@@ -105,12 +104,12 @@ size_flags_horizontal = 3
 mouse_filter = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
-theme_override_fonts/normal_font = ExtResource("2_yhc54")
+theme_override_fonts/normal_font = ExtResource("2_xlvfi")
 bbcode_enabled = true
-text = "[wave]¿TU TÚ?[/wave]"
+text = "[wave]Hi my popochiu!!![/wave]"
 scroll_active = false
 meta_underlined = false
-script = ExtResource("3_krhti")
+script = ExtResource("3_57j2s")
 used_when = 1
 
 [node name="ContinueIcon" type="TextureProgressBar" parent="DialogText/PortraitTextPanel/HBoxContainer/PanelContainer/PortraitText"]
@@ -119,15 +118,17 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -16.0
+offset_left = -13.0
 offset_top = 35.0
+offset_right = 3.0
 offset_bottom = 51.0
 grow_horizontal = 0
 value = 100.0
 fill_mode = 2
-texture_progress = ExtResource("4_63pl1")
+texture_progress = ExtResource("4_eaoyj")
 
 [node name="RightAvatar" type="TextureRect" parent="DialogText/PortraitTextPanel/HBoxContainer"]
+visible = false
 texture_filter = 1
 custom_minimum_size = Vector2(24, 48)
 layout_mode = 2
@@ -153,13 +154,13 @@ size_flags_horizontal = 0
 mouse_filter = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
-theme_override_fonts/normal_font = ExtResource("2_yhc54")
+theme_override_fonts/normal_font = ExtResource("2_xlvfi")
 bbcode_enabled = true
 text = "[center]Hi my friend[/center]"
 fit_content = true
 scroll_active = false
 meta_underlined = false
-script = ExtResource("3_krhti")
+script = ExtResource("3_57j2s")
 used_when = 2
 
 [node name="ContinueIcon" type="TextureProgressBar" parent="DialogText/Caption"]
@@ -173,4 +174,7 @@ offset_bottom = 16.0
 grow_horizontal = 0
 value = 100.0
 fill_mode = 2
-texture_progress = ExtResource("4_63pl1")
+texture_progress = ExtResource("4_eaoyj")
+
+[node name="DialogMenu" parent="." instance=ExtResource("5_ayg0j")]
+layout_mode = 1

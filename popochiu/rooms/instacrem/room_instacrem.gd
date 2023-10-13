@@ -1,9 +1,9 @@
 @tool
 extends PopochiuRoom
 
-const Data := preload('room_end_state.gd')
+const Data := preload('room_instacrem_state.gd')
 
-var state: Data = load('res://popochiu/rooms/end/room_end.tres')
+var state: Data = load('res://popochiu/rooms/instacrem/room_instacrem.tres')
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ GODOT ░░░░
@@ -14,15 +14,14 @@ var state: Data = load('res://popochiu/rooms/end/room_end.tres')
 # What happens when Popochiu loads the room. At this point the room is in the
 # tree but it is not visible
 func _on_room_entered() -> void:
-	Cursor.hide()
-	# [color=75cec8]PayPal: https://paypal.me/mapedorr[/color]
-	# [color=c46c71]Project: https://bit.ly/popochiu_itch[/color]
+	pass
 
 
 # What happens when the room changing transition finishes. At this point the room
 # is visible.
 func _on_room_transition_finished() -> void:
-	$AnimationPlayer.play("fade_in")
+	# You can use await E.queue([]) to excecute a sequence of instructions
+	pass
 
 
 # What happens before Popochiu unloads the room.
