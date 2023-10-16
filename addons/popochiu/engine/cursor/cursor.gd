@@ -35,13 +35,13 @@ func _process(delta):
 	
 	if $AnimatedSprite2D.position.x < 1.0:
 		$AnimatedSprite2D.position.x = 1.0
-	elif $AnimatedSprite2D.position.x > 318.0:
-		$AnimatedSprite2D.position.x = 318.0
+	elif $AnimatedSprite2D.position.x > 268.0:
+		$AnimatedSprite2D.position.x = 268.0
 	
 	if $AnimatedSprite2D.position.y < 1.0:
 		$AnimatedSprite2D.position.y = 1.0
-	elif $AnimatedSprite2D.position.y > 178.0:
-		$AnimatedSprite2D.position.y = 178.0
+	elif $AnimatedSprite2D.position.y > 268.0:
+		$AnimatedSprite2D.position.y = 268.0
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ PUBLIC ░░░░

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://7nae455aivjg"]
+
+[ext_resource type="Script" path="res://popochiu/rooms/airport/room_airport_state.gd" id="1_wmco4"]
+
+[resource]
+resource_name = "Airport"
+script = ExtResource("1_wmco4")
+script_name = "Airport"
+scene = "res://popochiu/rooms/airport/room_airport.tscn"
+visited = false
+visited_first_time = false
+visited_times = 0

@@ -1,0 +1,277 @@
+[gd_scene load_steps=26 format=3 uid="uid://ll8n2f7clds4"]
+
+[ext_resource type="Script" path="res://popochiu/rooms/airport/room_airport.gd" id="1_ab6he"]
+[ext_resource type="PackedScene" uid="uid://ddq1tpdtp8dw2" path="res://popochiu/rooms/airport/props/bg/prop_bg.tscn" id="2_bhkpn"]
+[ext_resource type="PackedScene" uid="uid://uvtywyf3pq1a" path="res://addons/popochiu/engine/objects/walkable_area/popochiu_walkable_area.tscn" id="2_s6j2u"]
+[ext_resource type="Script" path="res://popochiu/rooms/airport/walkable_areas/street/walkable_area_street.gd" id="3_ofd0y"]
+[ext_resource type="Texture2D" uid="uid://bwgttbw72fg5m" path="res://popochiu/rooms/airport/props/bg/el_dorado.png" id="4_mp58q"]
+[ext_resource type="PackedScene" uid="uid://cvygsqbr47cnm" path="res://popochiu/characters/goddiu/character_goddiu.tscn" id="6_7i10a"]
+[ext_resource type="Script" path="res://popochiu/characters/goddiu/character_goddiu.gd" id="7_wu4ef"]
+[ext_resource type="Texture2D" uid="uid://d2xygj7a16816" path="res://popochiu/characters/goddiu/sprites/goddiu_avatar_normal.png" id="8_kvvqu"]
+[ext_resource type="Texture2D" uid="uid://cveqk6x1kfmyj" path="res://popochiu/characters/goddiu/sprites/goddiu_avatar_sad.png" id="9_pc4cp"]
+[ext_resource type="Texture2D" uid="uid://cdqdukoyh0jfg" path="res://popochiu/characters/goddiu/sprites/goddiu_avatar_happy.png" id="10_hrrnq"]
+[ext_resource type="PackedScene" uid="uid://cpgsu8py8423f" path="res://popochiu/characters/popsy/character_popsy.tscn" id="11_dyxyj"]
+[ext_resource type="Script" path="res://popochiu/characters/popsy/character_popsy.gd" id="12_vftxt"]
+[ext_resource type="Texture2D" uid="uid://c2jhi2k8kcc12" path="res://popochiu/characters/popsy/sprites/popsy_normal.png" id="13_r7oai"]
+[ext_resource type="Texture2D" uid="uid://5q8khcup2w57" path="res://popochiu/characters/popsy/sprites/popsy_sad.png" id="14_y0f53"]
+[ext_resource type="Texture2D" uid="uid://b5pmi17s0ux0k" path="res://popochiu/characters/popsy/sprites/popsy_happy.png" id="15_cpndw"]
+[ext_resource type="PackedScene" uid="uid://ceiwbdcyh4hhx" path="res://popochiu/characters/chiquininin/character_chiquininin.tscn" id="16_d8r8d"]
+[ext_resource type="Script" path="res://popochiu/characters/chiquininin/character_chiquininin.gd" id="17_lr7a1"]
+[ext_resource type="Texture2D" uid="uid://l06enp15sosh" path="res://popochiu/characters/chiquininin/sprites/chiquininin_normal.png" id="18_b61cb"]
+[ext_resource type="Texture2D" uid="uid://due3fyaicvm5d" path="res://popochiu/characters/chiquininin/sprites/chiquininin_happy.png" id="19_2et1s"]
+[ext_resource type="Texture2D" uid="uid://013dkiuq7ng1" path="res://popochiu/characters/chiquininin/sprites/chiquininin_sad.png" id="20_10lbh"]
+[ext_resource type="PackedScene" uid="uid://vpoveyik0tif" path="res://popochiu/characters/gonorrein/character_gonorrein.tscn" id="21_e2o7t"]
+[ext_resource type="Script" path="res://popochiu/characters/gonorrein/character_gonorrein.gd" id="22_xa7fv"]
+[ext_resource type="Texture2D" uid="uid://7rprax8fsv5n" path="res://popochiu/characters/gonorrein/sprites/gonorrein_normal.png" id="23_xgi86"]
+[ext_resource type="Texture2D" uid="uid://svg1rcr7tw5a" path="res://popochiu/characters/gonorrein/sprites/gonorrein_angry.png" id="24_5h4pd"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_4piag"]
+vertices = PackedVector2Array(-265, 89, -221, 77, -219, 89, -266, 128, -176, 84, 260, 81, 262, 129)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 3, 2)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-265, 89, -221, 77, -219, 89, -176, 84, 260, 81, 262, 129, -266, 128)])
+
+[node name="RoomAirport" type="Node2D"]
+script = ExtResource("1_ab6he")
+script_name = "Airport"
+limit_left = -135.0
+limit_right = 405.0
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Street" parent="WalkableAreas" instance=ExtResource("2_s6j2u")]
+position = Vector2(135, 135)
+script = ExtResource("3_ofd0y")
+script_name = "Street"
+description = "Street"
+
+[node name="Perimeter" type="NavigationRegion2D" parent="WalkableAreas/Street"]
+modulate = Color(0, 1, 0, 1)
+navigation_polygon = SubResource("NavigationPolygon_4piag")
+
+[node name="Props" type="Node2D" parent="."]
+
+[node name="Bg" parent="Props" instance=ExtResource("2_bhkpn")]
+position = Vector2(135, 135)
+texture = ExtResource("4_mp58q")
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="Entrance" type="Marker2D" parent="Markers"]
+position = Vector2(-103, 225)
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="CharacterGoddiu *" type="Area2D" parent="Characters" instance=ExtResource("6_7i10a")]
+position = Vector2(346, 255)
+script = ExtResource("7_wu4ef")
+text_color = Color(0.4375, 0.425781, 0.917969, 1)
+flips_when = 2
+voices = [{
+"cue": "vo_goddiu",
+"emotion": "",
+"variations": 3
+}]
+avatars = [{
+"avatar": ExtResource("8_kvvqu"),
+"emotion": ""
+}, {
+"avatar": ExtResource("9_pc4cp"),
+"emotion": "sad"
+}, {
+"avatar": ExtResource("10_hrrnq"),
+"emotion": "happy"
+}]
+popochiu_placeholder = null
+script_name = "Goddiu"
+description = "Goddiu"
+clickable = false
+metadata/_popochiu_aseprite_config_ = {
+"o_folder": "",
+"o_name": "",
+"only_visible_layers": false,
+"op_exp": true,
+"player": "/root/@EditorNode@17637/@Control@697/@Panel@698/@VBoxContainer@706/@HSplitContainer@709/@HSplitContainer@717/@HSplitContainer@725/@VBoxContainer@726/@VSplitContainer@728/@VSplitContainer@754/@VBoxContainer@755/@PanelContainer@800/MainScreen/@CanvasItemEditor@10090/@VSplitContainer@9915/@HSplitContainer@9917/@HSplitContainer@9919/@Control@9920/@SubViewportContainer@9921/@SubViewport@9922/CharacterGoddiu/AnimationPlayer",
+"source": "res://popochiu/characters/goddiu/goddiu_extended_v1.aseprite",
+"tags": [{
+"import": true,
+"loops": true,
+"tag_name": "idle"
+}, {
+"import": true,
+"loops": true,
+"tag_name": "jump"
+}, {
+"import": true,
+"loops": true,
+"tag_name": "talk"
+}, {
+"import": true,
+"loops": true,
+"tag_name": "walk"
+}],
+"wipe_old_anims": true
+}
+
+[node name="CharacterPopsy *" type="Area2D" parent="Characters" instance=ExtResource("11_dyxyj")]
+position = Vector2(308, 223)
+script = ExtResource("12_vftxt")
+text_color = Color(0.765625, 0.421875, 0.441406, 1)
+flips_when = 1
+voices = [{
+"cue": "vo_popsy",
+"emotion": "",
+"variations": 3
+}]
+avatars = [{
+"avatar": ExtResource("13_r7oai"),
+"emotion": ""
+}, {
+"avatar": ExtResource("14_y0f53"),
+"emotion": "sad"
+}, {
+"avatar": ExtResource("15_cpndw"),
+"emotion": "happy"
+}]
+popochiu_placeholder = null
+script_name = "Popsy"
+description = "Popsy"
+clickable = false
+cursor = 8
+metadata/_popochiu_aseprite_config_ = {
+"o_folder": "",
+"o_name": "",
+"only_visible_layers": false,
+"op_exp": true,
+"player": "/root/@EditorNode@17637/@Control@697/@Panel@698/@VBoxContainer@706/@HSplitContainer@709/@HSplitContainer@717/@HSplitContainer@725/@VBoxContainer@726/@VSplitContainer@728/@VSplitContainer@754/@VBoxContainer@755/@PanelContainer@800/MainScreen/@CanvasItemEditor@10090/@VSplitContainer@9915/@HSplitContainer@9917/@HSplitContainer@9919/@Control@9920/@SubViewportContainer@9921/@SubViewport@9922/CharacterPopsy/AnimationPlayer",
+"source": "res://popochiu/characters/popsy/popsy.aseprite",
+"tags": [{
+"import": true,
+"loops": true,
+"tag_name": "idle"
+}, {
+"import": true,
+"loops": true,
+"tag_name": "talk"
+}, {
+"import": true,
+"loops": true,
+"tag_name": "cry"
+}, {
+"import": true,
+"loops": true,
+"tag_name": "happy"
+}, {
+"import": true,
+"loops": true,
+"tag_name": "walk"
+}, {
+"import": true,
+"loops": true,
+"tag_name": "stand"
+}],
+"wipe_old_anims": true
+}
+
+[node name="CharacterChiquininin *" type="Area2D" parent="Characters" instance=ExtResource("16_d8r8d")]
+position = Vector2(299, 249)
+script = ExtResource("17_lr7a1")
+text_color = Color(0.660156, 0.996094, 0.621094, 1)
+flips_when = 2
+voices = [{
+"cue": "vo_chiquininin",
+"emotion": "",
+"variations": 3
+}]
+avatars = [{
+"avatar": ExtResource("18_b61cb"),
+"emotion": ""
+}, {
+"avatar": ExtResource("19_2et1s"),
+"emotion": "happy"
+}, {
+"avatar": ExtResource("20_10lbh"),
+"emotion": "sad"
+}]
+popochiu_placeholder = null
+script_name = "Chiquininin"
+description = "Chiquininin"
+clickable = false
+metadata/_popochiu_aseprite_config_ = {
+"o_folder": "",
+"o_name": "",
+"only_visible_layers": false,
+"op_exp": true,
+"player": "/root/@EditorNode@17637/@Control@697/@Panel@698/@VBoxContainer@706/@HSplitContainer@709/@HSplitContainer@717/@HSplitContainer@725/@VBoxContainer@726/@VSplitContainer@728/@VSplitContainer@754/@VBoxContainer@755/@PanelContainer@800/MainScreen/@CanvasItemEditor@10090/@VSplitContainer@9915/@HSplitContainer@9917/@HSplitContainer@9919/@Control@9920/@SubViewportContainer@9921/@SubViewport@9922/CharacterChiquininin/AnimationPlayer",
+"source": "res://popochiu/characters/chiquininin/chiquininin.aseprite",
+"tags": [{
+"import": true,
+"loops": true,
+"tag_name": "idle"
+}, {
+"import": true,
+"loops": true,
+"tag_name": "walk"
+}, {
+"import": true,
+"loops": true,
+"tag_name": "talk"
+}, {
+"import": true,
+"loops": true,
+"tag_name": "sad"
+}, {
+"import": true,
+"loops": true,
+"tag_name": "happy"
+}],
+"wipe_old_anims": true
+}
+
+[node name="CharacterGonorrein *" type="Area2D" parent="Characters" instance=ExtResource("21_e2o7t")]
+position = Vector2(379, 232)
+script = ExtResource("22_xa7fv")
+text_color = Color(0.554688, 0.234375, 0.589844, 1)
+flips_when = 2
+voices = [{
+"cue": "vo_gonorrein",
+"emotion": "",
+"variations": 3
+}]
+avatars = [{
+"avatar": ExtResource("23_xgi86"),
+"emotion": ""
+}, {
+"avatar": ExtResource("24_5h4pd"),
+"emotion": "angry"
+}]
+popochiu_placeholder = null
+script_name = "Gonorrein"
+description = "Gonorrein"
+clickable = false
+cursor = 8
+metadata/_popochiu_aseprite_config_ = {
+"o_folder": "",
+"o_name": "",
+"only_visible_layers": false,
+"op_exp": true,
+"player": "/root/@EditorNode@17637/@Control@697/@Panel@698/@VBoxContainer@706/@HSplitContainer@709/@HSplitContainer@717/@HSplitContainer@725/@VBoxContainer@726/@VSplitContainer@728/@VSplitContainer@754/@VBoxContainer@755/@PanelContainer@800/MainScreen/@CanvasItemEditor@10090/@VSplitContainer@9915/@HSplitContainer@9917/@HSplitContainer@9919/@Control@9920/@SubViewportContainer@9921/@SubViewport@9922/CharacterGonorrein/AnimationPlayer",
+"source": "res://popochiu/characters/gonorrein/gonorrein.aseprite",
+"tags": [{
+"import": true,
+"loops": true,
+"tag_name": "idle"
+}, {
+"import": true,
+"loops": true,
+"tag_name": "angry"
+}, {
+"import": true,
+"loops": true,
+"tag_name": "up"
+}],
+"wipe_old_anims": true
+}
