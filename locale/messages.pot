@@ -112,3 +112,15 @@ msgstr ""
 
 msgid "Más vale prevenir que lamentar."
 msgstr ""
+
+msgid "¿Y lo que nos hace falta?"
+msgstr ""
+
+msgid "No te preocupes Gonorreín."
+msgstr ""
+
+msgid "Estamos muy cerca de conseguir todo el dinero."
+msgstr ""
+
+msgid "¡Seguro que la logramos!"
+msgstr ""

@@ -223,7 +223,7 @@ avatars = [{
 }]
 popochiu_placeholder = null
 script_name = "Gonorrein"
-description = "Gonorrein"
+description = "Gonorreín"
 clickable = false
 cursor = 8
 metadata/_popochiu_aseprite_config_ = {
@@ -253,12 +253,10 @@ metadata/_popochiu_aseprite_config_ = {
 polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
 
 [node name="BaselineHelper" type="Line2D" parent="."]
-visible = false
 points = PackedVector2Array(-10000, 0, 10000, 0)
 width = 1.0
 
 [node name="WalkToHelper" type="Marker2D" parent="."]
-visible = false
 
 [node name="ColorRect" type="ColorRect" parent="WalkToHelper"]
 offset_left = -2.5
@@ -281,4 +279,3 @@ vframes = 2
 frame = 4
 
 [node name="DialogPos" type="Marker2D" parent="."]
-visible = false

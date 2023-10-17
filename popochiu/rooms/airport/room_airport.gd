@@ -30,7 +30,10 @@ func _on_room_transition_finished() -> void:
 		"Gonorrein(angry): Pero si el viaje será en 2 semanas.",
 		"Popsy: Sí, ¿Pero y si nos quedamos dormidius?",
 		"Goddiu: Más vale prevenir que lamentar.",
-		"Gonorrein: ...",
+		"Gonorrein(angry): ¿Y lo que nos hace falta?",
+		"Carenalga: No te preocupes Gonorreín.",
+		"Carenalga: Estamos muy cerca de conseguir todo el dinero.",
+		"Carenalga: ¡Seguro que la logramos!",
 	])
 	
 	C.Goddiu.walk_to_marker("Entrance", Vector2(32.0, 0.0))

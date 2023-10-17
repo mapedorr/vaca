@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ll8n2f7clds4"]
+[gd_scene load_steps=12 format=3 uid="uid://ll8n2f7clds4"]
 
 [ext_resource type="Script" path="res://popochiu/rooms/airport/room_airport.gd" id="1_ab6he"]
 [ext_resource type="PackedScene" uid="uid://ddq1tpdtp8dw2" path="res://popochiu/rooms/airport/props/bg/prop_bg.tscn" id="2_bhkpn"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://popochiu/rooms/airport/walkable_areas/street/walkable_area_street.gd" id="3_ofd0y"]
 [ext_resource type="Texture2D" uid="uid://bwgttbw72fg5m" path="res://popochiu/rooms/airport/props/bg/el_dorado.png" id="4_mp58q"]
 [ext_resource type="PackedScene" uid="uid://cvygsqbr47cnm" path="res://popochiu/characters/goddiu/character_goddiu.tscn" id="6_7i10a"]
+[ext_resource type="PackedScene" uid="uid://cvakal27dt3n2" path="res://popochiu/characters/carenalga/character_carenalga.tscn" id="10_nb7pf"]
 [ext_resource type="PackedScene" uid="uid://cpgsu8py8423f" path="res://popochiu/characters/popsy/character_popsy.tscn" id="11_dyxyj"]
 [ext_resource type="PackedScene" uid="uid://ceiwbdcyh4hhx" path="res://popochiu/characters/chiquininin/character_chiquininin.tscn" id="16_d8r8d"]
 [ext_resource type="PackedScene" uid="uid://vpoveyik0tif" path="res://popochiu/characters/gonorrein/character_gonorrein.tscn" id="21_e2o7t"]
@@ -61,3 +62,6 @@ position = Vector2(299, 249)
 
 [node name="CharacterGonorrein *" parent="Characters" instance=ExtResource("21_e2o7t")]
 position = Vector2(379, 232)
+
+[node name="CharacterCarenalga *" parent="Characters" instance=ExtResource("10_nb7pf")]
+position = Vector2(135, 135)

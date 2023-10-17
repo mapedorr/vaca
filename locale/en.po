@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: mapedorr@gmail.com\n"
 "POT-Creation-Date: 2023-09-19 12:39-0500\n"
-"PO-Revision-Date: 2023-10-17 05:30-0500\n"
+"PO-Revision-Date: 2023-10-17 07:37-0500\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -145,6 +145,18 @@ msgstr "Yes, but what if we oversleep?"
 
 msgid "Más vale prevenir que lamentar."
 msgstr "Better safe than sorry."
+
+msgid "¿Y lo que nos hace falta?"
+msgstr "And what's missing?"
+
+msgid "No te preocupes Gonorreín."
+msgstr "Don't worry, Gonorreín."
+
+msgid "Estamos muy cerca de conseguir todo el dinero."
+msgstr "We're very close to getting all the money."
+
+msgid "¡Seguro que la logramos!"
+msgstr "We'll definitely make it!"
 
 #, fuzzy
 #~| msgid "¿Qué pasí?"
