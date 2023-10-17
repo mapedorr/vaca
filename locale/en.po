@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: mapedorr@gmail.com\n"
 "POT-Creation-Date: 2023-09-19 12:39-0500\n"
-"PO-Revision-Date: 2023-10-03 05:06-0500\n"
+"PO-Revision-Date: 2023-10-17 05:30-0500\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -99,6 +99,57 @@ msgstr ""
 "\n"
 "\n"
 "[rainbow]The popochius and I will thank you for it![/rainbow][/center]"
+
+# ------------------------------------------------------------------------------
+# Room House
+msgid "Les tengo una MUY BUENA NOTICIA."
+msgstr "I have VERY GOOD NEWS for you."
+
+msgid "¿Qué pasó?"
+msgstr "What's up?"
+
+msgid "Gracias a la ayuda de la comunidad."
+msgstr "Thanks to the community's help."
+
+msgid "Papiu Mateiu pudo comprar los pasajes pa' llevarnos a la GodotCon 2023."
+msgstr "Carenalga managed to buy the tickets to take us to GodotCon 2023."
+
+msgid "[shake]¿¡¡¡Qué!!!?[/shake]"
+msgstr "[shake]Whaaaaaat!!![/shake]"
+
+msgid "¿Tan Rápido Tolima?"
+msgstr "So fast!?"
+
+msgid "[wave]Síííííííííí[/wave]"
+msgstr "[wave]Yeeeeyyyyyyy[/wave]"
+
+msgid "NOS VAMOS PA' MAMEMANIA"
+msgstr "WE'LL GO TO MUNICHERMANY"
+
+msgid "¿Y el alojamiento?"
+msgstr "And the accommodation?"
+
+msgid "¿Y la comida?"
+msgstr "And the food?"
+
+# ------------------------------------------------------------------------------
+# Room Airport
+msgid "Rápido rápido, que no se nos haga tarde."
+msgstr "Hurry, hurry, don't let it get late."
+
+msgid "Pero si el viaje será en 2 semanas."
+msgstr "But the trip is in 2 weeks."
+
+msgid "Sí, ¿Pero y si nos quedamos dormidius?"
+msgstr "Yes, but what if we oversleep?"
+
+msgid "Más vale prevenir que lamentar."
+msgstr "Better safe than sorry."
+
+#, fuzzy
+#~| msgid "¿Qué pasí?"
+#~ msgid "Gonorrein: ¿Qué pasó?"
+#~ msgstr "What's up?"
 
 #~ msgid "[center]Puedes hacer tu aporte en cualquiera de estas opciones:"
 #~ msgstr ""

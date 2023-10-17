@@ -17,6 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
+# ------------------------------------------------------------------------------
 # Room Outside
 msgid "Oñiiiiiii."
 msgstr ""
@@ -64,4 +65,50 @@ msgid ""
 "\n"
 "\n"
 "[rainbow]¡Los popochius y yo te lo agradeceremos![/rainbow][/center]"
+msgstr ""
+
+# ------------------------------------------------------------------------------
+# Room House
+msgid "Les tengo una MUY BUENA NOTICIA."
+msgstr ""
+
+msgid "¿Qué pasó?"
+msgstr ""
+
+msgid "Gracias a la ayuda de la comunidad."
+msgstr ""
+
+msgid "Papiu Mateiu pudo comprar los pasajes pa' llevarnos a la GodotCon 2023."
+msgstr ""
+
+msgid "[shake]¿¡¡¡Qué!!!?[/shake]"
+msgstr ""
+
+msgid "¿Tan Rápido Tolima?"
+msgstr ""
+
+msgid "[wave]Síííííííííí[/wave]"
+msgstr ""
+
+msgid "NOS VAMOS PA' MAMEMANIA"
+msgstr ""
+
+msgid "¿Y el alojamiento?"
+msgstr ""
+
+msgid "¿Y la comida?"
+msgstr ""
+
+# ------------------------------------------------------------------------------
+# Room Airport
+msgid "Rápido rápido, que no se nos haga tarde."
+msgstr ""
+
+msgid "Pero si el viaje será en 2 semanas."
+msgstr ""
+
+msgid "Sí, ¿Pero y si nos quedamos dormidius?"
+msgstr ""
+
+msgid "Más vale prevenir que lamentar."
 msgstr ""
